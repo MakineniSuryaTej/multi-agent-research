@@ -20,7 +20,7 @@ class AgentState(TypedDict):
 research_agent = ResearchAgent()
 synthesis_agent = SynthesisAgent()
 
-def research_node(state: AgentState) -> AgentState:
+async def research_node(state: AgentState) -> AgentState:
     """Research agent node"""
     print(f"🔍 Research Agent: Working on '{state['query']}'")
     
@@ -31,7 +31,7 @@ def research_node(state: AgentState) -> AgentState:
     
     return result
 
-def synthesis_node(state: AgentState) -> AgentState:
+async def synthesis_node(state: AgentState) -> AgentState:
     """Synthesis agent node"""
     print(f"🧠 Synthesis Agent: Processing research")
     

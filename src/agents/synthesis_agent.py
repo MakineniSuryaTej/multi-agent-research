@@ -3,7 +3,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 class SynthesisAgent:
     def __init__(self):
-        self.llm = ChatAnthropic(model="claude-sonnet-4-5")
+        self.llm = ChatAnthropic(model="claude-haiku-4-5")
     
     def synthesize(self, state: dict) -> dict:
         """Synthesize research into coherent summary"""
